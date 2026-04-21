@@ -11,7 +11,7 @@ export function SessionList({ sessions }: SessionListProps) {
       <div className="card-body">
         <h2 className="h5 card-title mb-3">Completed Sessions</h2>
 
-        {/* Student note: Conditional rendering shows one UI for empty data and another when data exists. */}
+        {/* Conditional rendering shows one UI for empty data and another when data exists. */}
         {sessions.length === 0 ? (
           <p className="text-secondary mb-0">No sessions yet. Start your first one.</p>
         ) : (
