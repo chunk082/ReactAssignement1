@@ -1,0 +1,7 @@
+.app-bg {
+  background: linear-gradient(135deg, #eef6ff 0%, #f8fbff 45%, #ffffff 100%);
+}
+
+.card {
+  border: 1px solid #e3ebf6;
+}
