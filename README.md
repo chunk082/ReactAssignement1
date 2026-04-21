@@ -1,74 +1,73 @@
-# React + TypeScript + Vite
+# Focus Tracker App (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a **Focus Tracker App** built with **React**, **TypeScript**, **Vite**, and **Bootstrap**.
 
-Currently, two official plugins are available:
+## What This App Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Start a focus session by entering a task name and clicking **Start**
+- Show a live timer counting up in seconds
+- Stop a session by clicking **Stop**
+- Save completed sessions with task name and duration
+- Display a list of completed sessions
 
-## React Compiler
+## React + TypeScript Concepts Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `useState` for app state (task input, timer, sessions)
+- `useEffect` for timer side effect with cleanup
+- `useRef` to store start time without re-rendering
+- `useMemo` to calculate total focused time efficiently
+- Component-based structure with typed props
+- TypeScript interfaces/types for session data
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+  components/
+    FocusControls.tsx
+    TimerDisplay.tsx
+    SessionList.tsx
+  models/
+    focus.ts
+  App.tsx
+  main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Open terminal and go to the project folder:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd to/project/directory
 ```
-# ReactAssignement1
+
+2. Install dependencies (first time only):
+
+```bash
+npm install
+```
+
+3. Start development server:
+
+```bash
+npm run dev
+```
+
+4. Open the local URL shown in terminal (usually `http://localhost:5173`).
+
+## Available Scripts
+
+- `npm run dev` → run development server
+- `npm run build` → build production version
+- `npm run preview` → preview production build locally
+- `npm run lint` → run ESLint checks
+
+## Assignment Checklist
+
+- [x] New React + TypeScript project created
+- [x] Focus session start/stop flow implemented
+- [x] Live timer implemented
+- [x] Completed sessions list implemented
+- [x] Code comments added to explain state/hooks
+- [x] Bootstrap styling added
+
